@@ -32,15 +32,7 @@ const Stopwatch = () => {
     // const milliseconds = Math.floor((time % 1000) / 10);
 
     return (
-      (minutes < 10 ? "0" : "") +
-      minutes +
-      ":" +
-      (seconds < 10 ? "0" : "") +
-      seconds
-      // +
-      // // ":" +
-      // // (milliseconds < 10 ? "0" : "") +
-      // // milliseconds
+      (minutes < 10 ? "0" : "") + ":" + (seconds < 10 ? "0" : "") + seconds
     );
   };
 
