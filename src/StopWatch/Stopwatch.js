@@ -32,14 +32,18 @@ const Stopwatch = () => {
     // const milliseconds = Math.floor((time % 1000) / 10);
 
     return (
-      (minutes < 10 ? "0" : "") + ":" + (seconds < 10 ? "0" : "") + seconds
+      (minutes < 10 ? "" : "0") +
+      minutes +
+      ":" +
+      (seconds < 10 ? "0" : "") +
+      seconds
     );
   };
 
   return (
     <div className="stopwatch">
       <h1>Stopwatch</h1>
-      <p>Time:{formatTime(time)}</p>
+      <p>Time: {formatTime(time)}</p>
       <div>
         {!isRunning ? (
           <button onClick={start}>Start</button>
