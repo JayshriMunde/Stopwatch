@@ -21,6 +21,11 @@ const Stopwatch = () => {
     setTime(0);
   };
 
+  const stop = () => {
+    clearInterval(intervalRef.current);
+    SetIsRunning(false);
+  };
+
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60000);
     const seconds = Math.floor((time % 60000) / 1000);
@@ -44,7 +49,11 @@ const Stopwatch = () => {
       <h1>Stopwatch</h1>
       <p>Time:{formatTime(time)}</p>
       <div>
-        <button onClick={start}>Start</button>
+        {!isRunning ? (
+          <button onClick={start}>Start</button>
+        ) : (
+          <button onClick={stop}>Stop</button>
+        )}
         <button onClick={reset}>Reset </button>
       </div>
     </div>
