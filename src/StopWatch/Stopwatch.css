@@ -1,0 +1,11 @@
+.stopwatch {
+  width: 300px;
+  height: 200px;
+
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Center text inside the container */
+  padding: 20px;
+  border: 4px solid #16a44f;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
